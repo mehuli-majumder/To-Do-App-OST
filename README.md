@@ -22,8 +22,6 @@ This project demonstrates core Python principles, project structuring, testing, 
 
 ---
 
----
-
 ## Project Structure
 
 ```text
@@ -43,60 +41,51 @@ To-Do-App-OST/
 │
 └── tests/
     └── test_todo.py    # Unit tests for the core logic
-
----
-
 Installation & Setup
-
 This project includes a setup script to automate the entire installation process.
 
 1. Clone the repository
-```text
+bash
+Copy code
 git clone https://github.com/mehuli-majumder/To-Do-App-OST.git
+bash
+Copy code
 cd To-Do-App-OST
----
-
 2. Run the setup script
-
 This will create a virtual environment, install all required packages from requirements.txt, and run tests to verify the installation.
-```text
+
+bash
+Copy code
 python setup.py
----
-
 Usage
-
 After running the setup script, you must first activate the virtual environment.
 
 On Windows:
-```text
+
+bash
+Copy code
 .venv\Scripts\activate
----
-
 On macOS/Linux:
-```text
-source .venv/bin/activate
----
 
+bash
+Copy code
+source .venv/bin/activate
 Once the environment is active, you can run either the Web App or the CLI.
 
 Running the Web App
-```text
+bash
+Copy code
 streamlit run app.py
----
-
 Your browser will automatically open with the application.
 
 Running the Command-Line Interface (CLI)
-```text
+bash
+Copy code
 python src/main.py
----
-
 Running Tests
-```text
+bash
+Copy code
 pytest
----
-
 Contributing
-
 Contributions are welcome! 🎉
 Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
