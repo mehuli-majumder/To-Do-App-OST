@@ -22,6 +22,8 @@ This project demonstrates core Python principles, project structuring, testing, 
 
 ---
 
+---
+
 ## Project Structure
 
 To-Do-App-OST/
@@ -41,6 +43,8 @@ To-Do-App-OST/
 └── tests/
 └── test_todo.py # Unit tests for the core logic
 
+yaml
+Copy code
 
 ---
 
@@ -48,48 +52,51 @@ To-Do-App-OST/
 
 This project includes a setup script to automate the entire installation process.
 
-Installation & Setup
-This project includes a setup script to automate the entire installation process.
-
-Clone the repository:
-
-git clone [https://github.com/mehuli-majumder/To-Do-App-OST.git](https://github.com/mehuli-majumder/To-Do-App-OST.git)
-cd To-Do-App-OST
-
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mehuli-majumder/To-Do-App-OST.git
+   cd To-Do-App-OST
 Run the setup script:
 This will create a virtual environment, install all required packages from requirements.txt, and run tests to verify the installation.
 
+bash
+Copy code
 python setup.py
-
 Usage
 After running the setup script, you must first activate the virtual environment.
 
 On Windows:
 
+bash
+Copy code
 .venv\Scripts\activate
-
 On macOS/Linux:
 
+bash
+Copy code
 source .venv/bin/activate
-
 Once the environment is active, you can run either the Web App or the CLI.
 
 Running the Web App
 To launch the interactive Streamlit interface, run:
 
+bash
+Copy code
 streamlit run app.py
-
 Your browser will automatically open with the application.
 
 Running the Command-Line Interface (CLI)
 To use the app directly in your terminal, run:
 
+bash
+Copy code
 python src/main.py
-
 Running Tests
-To run the unit tests manually, activate the virtual environment and run pytest:
+To run the unit tests manually, activate the virtual environment and run:
 
+bash
+Copy code
 pytest
-
 Contributing
-Contributions are welcome! Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
+Contributions are welcome! 🎉
+Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
