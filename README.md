@@ -48,41 +48,48 @@ To-Do-App-OST/
 
 This project includes a setup script to automate the entire installation process.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/mehuli-majumder/To-Do-App-OST.git
-   cd To-Do-App-OST
+Installation & Setup
+This project includes a setup script to automate the entire installation process.
+
+Clone the repository:
+
+git clone [https://github.com/mehuli-majumder/To-Do-App-OST.git](https://github.com/mehuli-majumder/To-Do-App-OST.git)
+cd To-Do-App-OST
+
 Run the setup script:
 This will create a virtual environment, install all required packages from requirements.txt, and run tests to verify the installation.
 
 python setup.py
-🚀 Usage
-After running the setup script, activate the virtual environment:
+
+Usage
+After running the setup script, you must first activate the virtual environment.
 
 On Windows:
 
 .venv\Scripts\activate
+
 On macOS/Linux:
 
 source .venv/bin/activate
+
 Once the environment is active, you can run either the Web App or the CLI.
 
 Running the Web App
 To launch the interactive Streamlit interface, run:
 
 streamlit run app.py
+
 Your browser will automatically open with the application.
 
 Running the Command-Line Interface (CLI)
 To use the app directly in your terminal, run:
 
-
 python src/main.py
+
 Running Tests
-To run the unit tests manually, activate the virtual environment and run:
+To run the unit tests manually, activate the virtual environment and run pytest:
 
 pytest
-Contributing
-Contributions are welcome! 🎉
-Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
 
+Contributing
+Contributions are welcome! Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
