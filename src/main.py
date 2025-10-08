@@ -1,11 +1,11 @@
-# Combined imports from both branches
+# This version includes all necessary imports
 from datetime import datetime
 from todo import add_task, view_tasks, mark_done, delete_task, delete_completed_tasks, search_tasks
 
 def menu():
     while True:
         print("\n--- TO-DO APP ---")
-        # Menu options from the feature branch
+        # This is the full menu with all features
         print("1. Add Task")
         print("2. View Tasks")
         print("3. Mark Task as Done")
@@ -17,7 +17,6 @@ def menu():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            # "Add Task" logic from the main branch (with priority and due date)
             desc = input("Enter task description: ")
             priority = input("Enter priority (High, Medium, Low) [Medium]: ") or "Medium"
             due_date_str = input("Enter due date (YYYY-MM-DD) [Optional]: ")
@@ -55,19 +54,18 @@ def menu():
                     print("⚠️ Invalid task number.")
             except ValueError:
                 print("⚠️ Please enter a valid number.")
-
-        # New "Delete Completed" option from the feature branch
+        
         elif choice == "5":
             delete_completed_tasks()
             print("🧹 All completed tasks have been deleted!")
-
-        # New "Search" option from the feature branch
+        
+        # This is the "Search" feature from the incoming changes
         elif choice == "6":
             keyword = input("Enter keyword to search: ")
             print("\nMatching Tasks:")
             print(search_tasks(keyword))
-
-        # The "Exit" option is now #7
+        
+        # This is the "Exit" option, correctly numbered, from the incoming changes
         elif choice == "7":
             print("👋 Goodbye!")
             break
