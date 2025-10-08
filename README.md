@@ -51,13 +51,14 @@ Installation & Setup
 This project includes a setup script to automate the entire installation process.
 
 1. Clone the repository
+```text
 git clone https://github.com/mehuli-majumder/To-Do-App-OST.git
 cd To-Do-App-OST
 
 2. Run the setup script
 
 This will create a virtual environment, install all required packages from requirements.txt, and run tests to verify the installation.
-
+```text
 python setup.py
 
 Usage
@@ -65,27 +66,30 @@ Usage
 After running the setup script, you must first activate the virtual environment.
 
 On Windows:
-
+```text
 .venv\Scripts\activate
 
 
 On macOS/Linux:
-
+```text
 source .venv/bin/activate
 
 
 Once the environment is active, you can run either the Web App or the CLI.
 
 Running the Web App
+```text
 streamlit run app.py
 
 
 Your browser will automatically open with the application.
 
 Running the Command-Line Interface (CLI)
+```text
 python src/main.py
 
 Running Tests
+```text
 pytest
 
 Contributing
