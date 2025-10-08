@@ -1,4 +1,4 @@
-from todo import add_task, view_tasks, mark_done, delete_task
+from todo import add_task, view_tasks, mark_done, delete_task, delete_completed_tasks, search_tasks
 
 def menu():
     while True:
@@ -7,7 +7,10 @@ def menu():
         print("2. View Tasks")
         print("3. Mark Task as Done")
         print("4. Delete Task")
-        print("5. Exit")
+        print("5. Delete All Completed Tasks")
+        print("6. Search Tasks")
+        print("7. Exit")
+
 
         choice = input("Choose an option: ")
 
@@ -35,11 +38,21 @@ def menu():
                 print("⚠️ Invalid task number.")
 
         elif choice == "5":
+            delete_completed_tasks()
+            print("🧹 All completed tasks have been deleted!")
+
+        elif choice == "6":
+            keyword = input("Enter keyword to search: ")
+            print("\nMatching Tasks:")
+            print(search_tasks(keyword))
+
+        elif choice == "7":
             print("👋 Goodbye!")
             break
 
         else:
             print("⚠️ Invalid choice, try again.")
+
 
 if __name__ == "__main__":
     menu()

@@ -34,3 +34,18 @@ def delete_task(index):
         tasks.pop(index)
         return True
     return False
+
+def search_tasks(keyword):
+    """Returns a string with tasks that contain the search keyword."""
+    keyword = keyword.lower()
+    matching = [task for task in tasks if keyword in task["description"].lower()]
+
+    if not matching:
+        return "No matching tasks found."
+
+    result = ""
+    for i, task in enumerate(matching, start=1):
+        status = "✅" if task["done"] else "❌"
+        result += f"{i}. {task['description']} [{status}]\n"
+    return result
+
