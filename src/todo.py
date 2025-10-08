@@ -34,3 +34,17 @@ def delete_task(index):
         tasks.pop(index)
         return True
     return False
+
+def delete_completed_tasks():
+    global tasks
+    tasks = [task for task in tasks if not task.done]
+    return True
+
+def search_tasks(keyword):
+    keyword = keyword.lower()
+    matching = [task for task in tasks if keyword in task.description.lower()]
+
+    if not matching:
+        return "No matching tasks found."
+
+    return "\n".join([f"{i+1}. {task}" for i, task in enumerate(matching)])
