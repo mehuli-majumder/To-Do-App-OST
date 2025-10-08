@@ -1,79 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
-# Project Structure
-
-[](https://github.com/mehuli-majumder/To-Do-App-OST#project-structure)
-To-Do-App-OST/
-│
-├── .gitignore
-├── app.py              \# Streamlit Web App entry point
-├── CONTRIBUTING.md     \# Guidelines for contributors
-├── README.md           \# This file
-├── requirements.txt    \# Project dependencies
-├── setup.py            \# Automated setup script
-├── tasks.json          \# Database file for storing tasks
-│
-├── src/
-│   ├── main.py         \# CLI App entry point
-│   └── todo.py         \# Core application logic and Task class
-│
-└── tests/
-└── test_todo.py    \# Unit tests for the core logic
-Installation \& Setup
-This project includes a setup script to automate the entire installation process.
-
-1. Clone the repository
-bash
-Copy code
-git clone [https://github.com/mehuli-majumder/To-Do-App-OST.git](https://github.com/mehuli-majumder/To-Do-App-OST.git)
-bash
-Copy code
-cd To-Do-App-OST
-2. Run the setup script
-This will create a virtual environment, install all required packages from requirements.txt, and run tests to verify the installation.
-
-bash
-Copy code
-python setup.py
-Usage
-After running the setup script, you must first activate the virtual environment.
-
-On Windows:
-
-bash
-Copy code
-.venv\Scripts\activate
-On macOS/Linux:
-
-bash
-Copy code
-source .venv/bin/activate
-Once the environment is active, you can run either the Web App or the CLI.
-
-Running the Web App
-bash
-Copy code
-streamlit run app.py
-Your browser will automatically open with the application.
-
-Running the Command-Line Interface (CLI)
-bash
-Copy code
-python src/main.py
-Running Tests
-bash
-Copy code
-pytest
-Contributing
-Contributions are welcome! 🎉
-Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
-
-draft me this readme in such a format that i can copy paste directly and push to github and it is structurally organised with good formatting
-
-Here is a well-organized and ready-to-copy README draft for the To-Do-App-OST project, formatted with clear sections, code blocks, and GitHub-friendly Markdown structure.[^1]
-
-***
-
 # To-Do-App-OST
 
 A versatile, feature-rich **To-Do application** that runs both as a **command-line interface (CLI)** and an interactive **web application** using **Streamlit**. This project demonstrates core Python principles, organized project structure, testing, and a thorough development workflow.
@@ -213,7 +137,5 @@ Maintained by [mehuli-majumder](https://github.com/mehuli-majumder). See reposit
 
 ---
 
-<div align="center">⁂</div>
 
-[^1]: https://github.com/mehuli-majumder/To-Do-App-OST
 
