@@ -34,3 +34,9 @@ def delete_task(index):
         tasks.pop(index)
         return True
     return False
+
+def delete_completed_tasks():
+    global tasks
+    tasks = [task for task in tasks if not task.get("done", False)]
+    print("🧹 All completed tasks have been deleted!")
+
