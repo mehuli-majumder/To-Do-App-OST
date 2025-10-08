@@ -7,7 +7,7 @@ A versatile and feature-rich To-Do application that runs both as a command-line 
 ## Features
 
 - **Dual Interfaces**: Run the app in your terminal or in your browser.
-- **Task Persistence**: Tasks are automatically saved to a `tasks.json` file, so you never lose your data.
+- **Task Persistence**: Tasks are automatically saved to a \`tasks.json\` file, so you never lose your data.
 - **Task Properties**: Add tasks with descriptions, priority levels (High, Medium, Low), and optional due dates.
 - **Full CRUD Functionality**: Create, view, mark as done, and delete tasks.
 - **Advanced Management**:
@@ -15,12 +15,12 @@ A versatile and feature-rich To-Do application that runs both as a command-line 
   - **Bulk Delete**: Clear all completed tasks with a single command.
   - **Smart Sorting**: Tasks are automatically sorted by priority and then by due date.
 - **Ready for Collaboration**: Includes clear contribution guidelines.
-- **Automated Setup**: A `setup.py` script creates a virtual environment and installs all dependencies for you.
+- **Automated Setup**: A \`setup.py\` script creates a virtual environment and installs all dependencies for you.
 - **Tested**: Unit tests are included to ensure core logic is reliable.
 
 ## Project Structure
 
-```
+\`\`\`
 To-Do-App-OST/
 │
 ├── .gitignore
@@ -37,60 +37,60 @@ To-Do-App-OST/
 │
 └── tests/
     └── test_todo.py        # Unit tests for the core logic
-```
+\`\`\`
 
 ## Installation & Setup
 
 This project includes a setup script to automate the entire installation process.
 
 1.  **Clone the repository:**
-    ```bash
+    \`\`\`bash
     git clone https://github.com/mehuli-majumder/To-Do-App-OST.git
     cd To-To-App-OST
-    ```
+    \`\`\`
 
 2.  **Run the setup script:**
-    This will create a virtual environment, install all required packages from `requirements.txt`, and run tests to verify the installation.
-    ```bash
+    This will create a virtual environment, install all required packages from \`requirements.txt\`, and run tests to verify the installation.
+    \`\`\`bash
     python setup.py
-    ```
+    \`\`\`
 
 ## Usage
 
 After running the setup script, you must first activate the virtual environment.
 
 - **On Windows:**
-  ```cmd
-  .venv\Scripts\activate
-  ```
+  \`\`\`cmd
+  .venv\\Scripts\\activate
+  \`\`\`
 - **On macOS/Linux:**
-  ```bash
+  \`\`\`bash
   source .venv/bin/activate
-  ```
+  \`\`\`
 
 Once the environment is active, you can run either the Web App or the CLI.
 
 ### Running the Web App
 
 To launch the interactive Streamlit interface, run:
-```bash
+\`\`\`bash
 streamlit run app.py
-```
+\`\`\`
 Your browser will automatically open with the application.
 
 ### Running the Command-Line Interface (CLI)
 
 To use the app directly in your terminal, run:
-```bash
+\`\`\`bash
 python src/main.py
-```
+\`\`\`
 
 ## Running Tests
 
-To run the unit tests manually, activate the virtual environment and run `pytest`:
-```bash
+To run the unit tests manually, activate the virtual environment and run \`pytest\`:
+\`\`\`bash
 pytest
-```
+\`\`\`
 
 ## Contributing
 
