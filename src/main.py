@@ -1,3 +1,4 @@
+from datetime import datetime
 from todo import add_task, view_tasks, mark_done, delete_task
 
 def menu():
@@ -13,26 +14,42 @@ def menu():
 
         if choice == "1":
             desc = input("Enter task description: ")
-            add_task(desc)
+            priority = input("Enter priority (High, Medium, Low) [Medium]: ") or "Medium"
+            due_date_str = input("Enter due date (YYYY-MM-DD) [Optional]: ")
+            due_date = None
+            if due_date_str:
+                try:
+                    due_date = datetime.strptime(due_date_str, "%Y-%m-%d").date()
+                except ValueError:
+                    print("⚠️ Invalid date format. Task added without a due date.")
+
+            add_task(desc, priority, due_date)
             print("✅ Task added!")
 
         elif choice == "2":
-            print("\nTasks:")
+            print("\n--- Your Tasks ---")
             print(view_tasks())
+            print("--------------------")
 
         elif choice == "3":
-            idx = int(input("Enter task number to mark as done: ")) - 1
-            if mark_done(idx):
-                print("✅ Task marked as done!")
-            else:
-                print("⚠️ Invalid task number.")
+            try:
+                idx = int(input("Enter task number to mark as done: ")) - 1
+                if mark_done(idx):
+                    print("✅ Task marked as done!")
+                else:
+                    print("⚠️ Invalid task number.")
+            except ValueError:
+                print("⚠️ Please enter a valid number.")
 
         elif choice == "4":
-            idx = int(input("Enter task number to delete: ")) - 1
-            if delete_task(idx):
-                print("🗑 Task deleted!")
-            else:
-                print("⚠️ Invalid task number.")
+            try:
+                idx = int(input("Enter task number to delete: ")) - 1
+                if delete_task(idx):
+                    print("🗑️ Task deleted!")
+                else:
+                    print("⚠️ Invalid task number.")
+            except ValueError:
+                print("⚠️ Please enter a valid number.")
 
         elif choice == "5":
             print("👋 Goodbye!")
